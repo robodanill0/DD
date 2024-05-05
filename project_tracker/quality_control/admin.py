@@ -44,6 +44,7 @@ class BugReportAdmin(admin.ModelAdmin):
 # Класс администратора для модели FeatureRequest
 @admin.register(FeatureRequest)
 class FeatureRequestAdmin(admin.ModelAdmin):
+    actions = [make_published]
     list_display = ('title', 'project', 'status', 'task', 'created_at', 'updated_at', 'priority')
     list_filter = ('status', 'project', 'task')
     search_fields = ('title', 'description')
