@@ -10,5 +10,12 @@ def index(request):
 def bug_list(request):
     return HttpResponse("Список всех багов.")
 
+def bug_detail(request, bug_id):
+    return HttpResponse("Детали бага " + str(bug_id))
+
+def feature_id_detail(request, feature_id):
+    return HttpResponse("Детали улучшения " + str(feature_id))
+
 def feature_list(request):
     return HttpResponse("Запросы на улучшение.")
+
