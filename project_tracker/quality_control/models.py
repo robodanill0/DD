@@ -3,6 +3,9 @@ from tasks.models import Project, Task
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 class BugReport(models.Model):
+	def __str__(self):
+		return self.title
+
 	project = models.ForeignKey(
 		Project,
 		related_name='BugReport',
@@ -38,6 +41,9 @@ class BugReport(models.Model):
     )
 	
 class FeatureRequest(models.Model):
+	def __str__(self):
+		return self.title
+
 	project = models.ForeignKey(
 		Project,
 		related_name='FeatureRequest',
