@@ -1,0 +1,9 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+	<h1>{{ feature.title }}</h1>
+	<p>{{ feature.description }}</p>
+
+	<li>Status: {{feature.status}}</li><li>Priority: {{feature.priority}}</li>
+	<li>Task's name: <b>{{feature.task.name}}</b></li><li>Project's name: <b>{{feature.project.name}}</li>
+{% endblock %}
